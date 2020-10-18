@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dc862bfc-f8e1-4e79-be84-32f23b683cc8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Crypto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Crypto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/CryptoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/CryptoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,15 +60,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CryptoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CC_CesarsCryptography JUnit_TDD_V2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CryptoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CryptoTest.encryptStringUsingCharacterMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CC_CesarsCryptography JUnit_TDD_V2" />
       <option name="PACKAGE_NAME" value="" />
@@ -81,11 +70,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CryptoTest.encryptStringUsingKey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CryptoTest.hasMapBeenPopulatedCorrectlyFromAllowedCharactersString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CC_CesarsCryptography JUnit_TDD_V2" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CryptoTest" />
-      <option name="METHOD_NAME" value="encryptStringUsingKey" />
+      <option name="METHOD_NAME" value="hasMapBeenPopulatedCorrectlyFromAllowedCharactersString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,20 +100,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CryptoTest.readFirstSecondAndLastWordFromTextFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CC_CesarsCryptography JUnit_TDD_V2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CryptoTest" />
+      <option name="METHOD_NAME" value="readFirstSecondAndLastWordFromTextFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.CryptoTest" />
-      <item itemvalue="JUnit.CryptoTest.encryptStringUsingKey" />
       <item itemvalue="JUnit.CryptoTest.readFile" />
       <item itemvalue="JUnit.CryptoTest.readFirstAndSecondWordFromTextFile" />
       <item itemvalue="JUnit.CryptoTest.encryptStringUsingCharacterMap" />
+      <item itemvalue="JUnit.CryptoTest.hasMapBeenPopulatedCorrectlyFromAllowedCharactersString" />
+      <item itemvalue="JUnit.CryptoTest.readFirstSecondAndLastWordFromTextFile" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CryptoTest.encryptStringUsingCharacterMap" />
+        <item itemvalue="JUnit.CryptoTest.readFirstSecondAndLastWordFromTextFile" />
+        <item itemvalue="JUnit.CryptoTest.hasMapBeenPopulatedCorrectlyFromAllowedCharactersString" />
         <item itemvalue="JUnit.CryptoTest.readFirstAndSecondWordFromTextFile" />
         <item itemvalue="JUnit.CryptoTest.readFile" />
-        <item itemvalue="JUnit.CryptoTest.encryptStringUsingKey" />
-        <item itemvalue="JUnit.CryptoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -140,7 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600672787349</updated>
       <workItem from="1600672793285" duration="8705000" />
-      <workItem from="1603037525830" duration="7406000" />
+      <workItem from="1603037525830" duration="7708000" />
     </task>
     <task id="LOCAL-00001" summary="-- slettet decryptor klassen. lavet crypto klasse der skal stå for kryptering/dekryptering.. skal måske deles mere op.&#10;-- Laves flere test metoder. Bl.a. en metode der benytter characterMap til at kryptere end string. Lavet med switch case. Kan nok gøres smartere.">
       <created>1603047850219</created>
@@ -149,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603047850219</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="-- tilføjet nogle tegn tegn til allowedCharacters (manglede wæøå)&#10;-- tilføjet kommentar til CryptoTest. Hvis key er sat for højt virker logikken for kryptering ikke">
+      <created>1603049280109</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603049280109</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,32 +163,33 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-- slettet decryptor klassen. lavet crypto klasse der skal stå for kryptering/dekryptering.. skal måske deles mere op.&#10;-- Laves flere test metoder. Bl.a. en metode der benytter characterMap til at kryptere end string. Lavet med switch case. Kan nok gøres smartere." />
-    <option name="LAST_COMMIT_MESSAGE" value="-- slettet decryptor klassen. lavet crypto klasse der skal stå for kryptering/dekryptering.. skal måske deles mere op.&#10;-- Laves flere test metoder. Bl.a. en metode der benytter characterMap til at kryptere end string. Lavet med switch case. Kan nok gøres smartere." />
+    <MESSAGE value="-- tilføjet nogle tegn tegn til allowedCharacters (manglede wæøå)&#10;-- tilføjet kommentar til CryptoTest. Hvis key er sat for højt virker logikken for kryptering ikke" />
+    <option name="LAST_COMMIT_MESSAGE" value="-- tilføjet nogle tegn tegn til allowedCharacters (manglede wæøå)&#10;-- tilføjet kommentar til CryptoTest. Hvis key er sat for højt virker logikken for kryptering ikke" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="291" y="74" key="CommitChangelistDialog2" timestamp="1603047849193">
+    <state x="291" y="74" key="CommitChangelistDialog2" timestamp="1603049279275">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="291" y="74" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603047849193" />
-    <state width="1877" height="273" key="GridCell.Tab.0.bottom" timestamp="1603048782312">
+    <state x="291" y="74" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049279275" />
+    <state width="1877" height="273" key="GridCell.Tab.0.bottom" timestamp="1603049303177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603048782312" />
+    <state width="1877" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049303177" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="273" key="GridCell.Tab.0.center" timestamp="1603048782312">
+    <state width="1877" height="273" key="GridCell.Tab.0.center" timestamp="1603049303177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="273" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603048782312" />
+    <state width="1877" height="273" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049303177" />
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="273" key="GridCell.Tab.0.left" timestamp="1603048782312">
+    <state width="1877" height="273" key="GridCell.Tab.0.left" timestamp="1603049303177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="273" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603048782312" />
+    <state width="1877" height="273" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049303177" />
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="273" key="GridCell.Tab.0.right" timestamp="1603048782312">
+    <state width="1877" height="273" key="GridCell.Tab.0.right" timestamp="1603049303177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="273" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603048782312" />
+    <state width="1877" height="273" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049303177" />
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
     <state width="1877" height="338" key="GridCell.Tab.1.bottom" timestamp="1603047547373">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -224,10 +231,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600675397473" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603047851947">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603049281300">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603047851947" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049281300" />
     <state x="665" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600675545731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

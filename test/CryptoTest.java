@@ -44,10 +44,10 @@ class CryptoTest {
     @Test
     void hasMapBeenPopulatedCorrectlyFromAllowedCharactersString() {
         assertAll("characterMap",
-                () -> assertEquals('a', characterMap.get('x')),
+                () -> assertEquals('æ', characterMap.get('x')),
                 () -> assertEquals('d', characterMap.get('a')),
                 () -> assertEquals('p', characterMap.get('m')),
-                () -> assertEquals('z', characterMap.get('v')),
+                () -> assertEquals('y', characterMap.get('v')),
                 () -> assertEquals('v', characterMap.get('s'))
         );
     }
