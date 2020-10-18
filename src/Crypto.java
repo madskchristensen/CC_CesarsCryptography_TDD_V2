@@ -8,4 +8,11 @@ public class Crypto {
             nej -- erstat med ?
             tilføj til string? som skal returneres
      */
+
+    /*
+        Ideer:
+
+        -- Metode der gennemgår den givne tekst fil og gemmer alle tegn fra filen i et sæt (så de alle er unikke)
+        -- Herefter kan man konsultere med sættet for at tjekke om en karakter er illegal eller ej
+     */
 }

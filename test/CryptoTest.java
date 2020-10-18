@@ -18,10 +18,11 @@ class CryptoTest {
 
     @BeforeAll
     static void init() {
-        allowedCharacters = "abcdefghijklmnopqrstuvxyz";
+        allowedCharacters = "abcdefghijklmnopqrstuvwxyzæøå";
         allowedExtraCharacters = ",.- ";
     }
 
+    // Logikken går i stykker hvis key er for høj. F.eks. 28. Kan det fikses?
     @BeforeEach
     public void prepareMapWithKey3() {
         characterMap = new HashMap<>();
@@ -35,7 +36,7 @@ class CryptoTest {
                 characterMap.put(allowedCharacters.charAt(i), allowedCharacters.charAt(j));
                 j++;
             } else {
-                characterMap.put(allowedCharacters.charAt(i), allowedCharacters.charAt(i + 3));
+                characterMap.put(allowedCharacters.charAt(i), allowedCharacters.charAt(i + key));
             }
         }
     }
@@ -86,6 +87,9 @@ class CryptoTest {
 
             if (allowedCharacters.contains("" + currentChar) || allowedExtraCharacters.contains("" + currentChar)) {
                 switch (currentChar) {
+                    case ' ':
+                        encrpytedString.append(' ');
+                        break;
                     case ',':
                         encrpytedString.append(',');
                         break;
@@ -94,9 +98,6 @@ class CryptoTest {
                         break;
                     case '-':
                         encrpytedString.append('-');
-                        break;
-                    case ' ':
-                        encrpytedString.append(' ');
                         break;
                     default:
                         encrpytedString.append(characterMap.get(currentChar));
