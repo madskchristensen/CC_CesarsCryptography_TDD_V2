@@ -84,25 +84,15 @@ class CryptoTest {
 
         for (int i = 0; i < stringToEncrypt.length(); i++) {
             char currentChar = stringToEncrypt.charAt(i);
+            boolean allowedCharacter = allowedCharacters.contains("" + currentChar);
+            boolean allowedExtraCharacter = allowedExtraCharacters.contains("" + currentChar);
 
-            if (allowedCharacters.contains("" + currentChar) || allowedExtraCharacters.contains("" + currentChar)) {
-                switch (currentChar) {
-                    case ' ':
-                        encrpytedString.append(' ');
-                        break;
-                    case ',':
-                        encrpytedString.append(',');
-                        break;
-                    case '.':
-                        encrpytedString.append('.');
-                        break;
-                    case '-':
-                        encrpytedString.append('-');
-                        break;
-                    default:
-                        encrpytedString.append(characterMap.get(currentChar));
-                        break;
-                }
+            if (allowedCharacter) {
+                encrpytedString.append(characterMap.get(currentChar));
+
+            } else if (allowedExtraCharacter) {
+                encrpytedString.append(currentChar);
+
             } else {
                 encrpytedString.append("\u25A1");
             }
