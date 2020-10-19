@@ -19,7 +19,7 @@ class CryptoTest {
     @BeforeAll
     static void init() {
         allowedCharacters = "abcdefghijklmnopqrstuvwxyzæøå";
-        allowedExtraCharacters = ",.- ";
+        allowedExtraCharacters = "[!@#$%&*()_+=|<>?{}\\[]~-],.;: ";
     }
 
     // Logikken går i stykker hvis key er for høj. F.eks. 28. Kan det fikses?
@@ -79,25 +79,38 @@ class CryptoTest {
 
     @Test
     void encryptStringUsingCharacterMap() {
-        String stringToEncrypt = "hej med dig";
+        String stringToEncrypt = "Hej+[ meD]}3,45 dig15.13¤";
         StringBuilder encrpytedString = new StringBuilder();
 
         for (int i = 0; i < stringToEncrypt.length(); i++) {
             char currentChar = stringToEncrypt.charAt(i);
-            boolean allowedCharacter = allowedCharacters.contains("" + currentChar);
-            boolean allowedExtraCharacter = allowedExtraCharacters.contains("" + currentChar);
 
-            if (allowedCharacter) {
-                encrpytedString.append(characterMap.get(currentChar));
+            // sæt state på booleans der beskriver den nuværende char
+            boolean isNumber = Character.isDigit(currentChar);
+            boolean isUpperCase = Character.isUpperCase(currentChar);
+            boolean isAllowedCharacter = allowedCharacters.contains("" + Character.toLowerCase(currentChar));
+            boolean isAllowedExtra = allowedExtraCharacters.contains("" + currentChar);
 
-            } else if (allowedExtraCharacter) {
+            // udfør operation alt efter state på booleans
+            if (isNumber) {
                 encrpytedString.append(currentChar);
+
+            } else if (isAllowedExtra) {
+                encrpytedString.append(currentChar);
+
+            } else if (isUpperCase && isAllowedCharacter) {
+                char encryptedChar = characterMap.get(Character.toLowerCase(currentChar));
+                encrpytedString.append(Character.toUpperCase(encryptedChar));
+                // oneliner som gør det samme: encrpytedString.append(Character.toUpperCase(characterMap.get(Character.toLowerCase(currentChar))));
+
+            } else if (isAllowedCharacter) {
+                encrpytedString.append(characterMap.get(currentChar));
 
             } else {
                 encrpytedString.append("\u25A1");
             }
         }
 
-        assertEquals("khm phg glj", encrpytedString.toString());
+        assertEquals("Khm+[ phG]}3,45 glj15.13□", encrpytedString.toString());
     }
 }

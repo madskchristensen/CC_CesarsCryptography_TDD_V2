@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc862bfc-f8e1-4e79-be84-32f23b683cc8" name="Default Changelist" comment="">
+    <list default="true" id="dc862bfc-f8e1-4e79-be84-32f23b683cc8" name="Default Changelist" comment="-- Lavet crypto klasse samt testet.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Crypto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Crypto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/CryptoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/CryptoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,14 +52,23 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CryptoTest.encryptStringUsingCharacterMap">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="CC_CesarsCryptography JUnit_TDD_V2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -77,16 +88,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CryptoTest" />
       <option name="METHOD_NAME" value="hasMapBeenPopulatedCorrectlyFromAllowedCharactersString" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CryptoTest.readFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CC_CesarsCryptography JUnit_TDD_V2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CryptoTest" />
-      <option name="METHOD_NAME" value="readFile" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -113,19 +114,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CryptoTest.readFile" />
       <item itemvalue="JUnit.CryptoTest.readFirstAndSecondWordFromTextFile" />
       <item itemvalue="JUnit.CryptoTest.encryptStringUsingCharacterMap" />
       <item itemvalue="JUnit.CryptoTest.hasMapBeenPopulatedCorrectlyFromAllowedCharactersString" />
       <item itemvalue="JUnit.CryptoTest.readFirstSecondAndLastWordFromTextFile" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CryptoTest.encryptStringUsingCharacterMap" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.CryptoTest.readFirstSecondAndLastWordFromTextFile" />
+        <item itemvalue="JUnit.CryptoTest.encryptStringUsingCharacterMap" />
         <item itemvalue="JUnit.CryptoTest.hasMapBeenPopulatedCorrectlyFromAllowedCharactersString" />
         <item itemvalue="JUnit.CryptoTest.readFirstAndSecondWordFromTextFile" />
-        <item itemvalue="JUnit.CryptoTest.readFile" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +142,8 @@
       <option name="presentableId" value="Default" />
       <updated>1600672787349</updated>
       <workItem from="1600672793285" duration="8705000" />
-      <workItem from="1603037525830" duration="8328000" />
+      <workItem from="1603037525830" duration="8378000" />
+      <workItem from="1603097189266" duration="10282000" />
     </task>
     <task id="LOCAL-00001" summary="-- slettet decryptor klassen. lavet crypto klasse der skal stå for kryptering/dekryptering.. skal måske deles mere op.&#10;-- Laves flere test metoder. Bl.a. en metode der benytter characterMap til at kryptere end string. Lavet med switch case. Kan nok gøres smartere.">
       <created>1603047850219</created>
@@ -164,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603049498794</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="-- gjort logikken for kryptering pænere">
+      <created>1603049953912</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603049953912</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,77 +183,82 @@
     <MESSAGE value="-- slettet decryptor klassen. lavet crypto klasse der skal stå for kryptering/dekryptering.. skal måske deles mere op.&#10;-- Laves flere test metoder. Bl.a. en metode der benytter characterMap til at kryptere end string. Lavet med switch case. Kan nok gøres smartere." />
     <MESSAGE value="-- tilføjet nogle tegn tegn til allowedCharacters (manglede wæøå)&#10;-- tilføjet kommentar til CryptoTest. Hvis key er sat for højt virker logikken for kryptering ikke" />
     <MESSAGE value="-- rettet hasMapBeenPopulated.... test metode da den forventede forkerte tegn efter ændring af tilladte karakterer" />
-    <option name="LAST_COMMIT_MESSAGE" value="-- rettet hasMapBeenPopulated.... test metode da den forventede forkerte tegn efter ændring af tilladte karakterer" />
+    <MESSAGE value="-- gjort logikken for kryptering pænere" />
+    <option name="LAST_COMMIT_MESSAGE" value="-- gjort logikken for kryptering pænere" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="297" y="154" width="1108" height="771" key="CommitChangelistDialog2" timestamp="1603049497957">
+    <state x="588" y="209" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1603106040105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="297" y="154" width="1108" height="771" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049497957" />
-    <state width="1877" height="273" key="GridCell.Tab.0.bottom" timestamp="1603049903351">
+    <state x="588" y="209" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603106040105" />
+    <state x="504" y="194" width="1108" height="771" key="CommitChangelistDialog2" timestamp="1603107884124">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049903351" />
+    <state x="504" y="194" width="1108" height="771" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603107884124" />
+    <state width="1877" height="227" key="GridCell.Tab.0.bottom" timestamp="1603107794303">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603107794303" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="273" key="GridCell.Tab.0.center" timestamp="1603049903351">
+    <state width="1877" height="227" key="GridCell.Tab.0.center" timestamp="1603107794303">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="273" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049903351" />
+    <state width="1877" height="227" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603107794303" />
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="273" key="GridCell.Tab.0.left" timestamp="1603049903351">
+    <state width="1877" height="227" key="GridCell.Tab.0.left" timestamp="1603107794303">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="273" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049903351" />
+    <state width="1877" height="227" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603107794303" />
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="273" key="GridCell.Tab.0.right" timestamp="1603049903351">
+    <state width="1877" height="227" key="GridCell.Tab.0.right" timestamp="1603107794303">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="273" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049903351" />
+    <state width="1877" height="227" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603107794303" />
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="338" key="GridCell.Tab.1.bottom" timestamp="1603047547373">
+    <state width="1877" height="338" key="GridCell.Tab.1.bottom" timestamp="1603049978551">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="338" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603047547373" />
+    <state width="1877" height="338" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049978551" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="338" key="GridCell.Tab.1.center" timestamp="1603047547372">
+    <state width="1877" height="338" key="GridCell.Tab.1.center" timestamp="1603049978551">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="338" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603047547372" />
+    <state width="1877" height="338" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049978551" />
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="338" key="GridCell.Tab.1.left" timestamp="1603047547372">
+    <state width="1877" height="338" key="GridCell.Tab.1.left" timestamp="1603049978551">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="338" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603047547372" />
+    <state width="1877" height="338" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049978551" />
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="338" key="GridCell.Tab.1.right" timestamp="1603047547373">
+    <state width="1877" height="338" key="GridCell.Tab.1.right" timestamp="1603049978551">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="338" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603047547373" />
+    <state width="1877" height="338" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049978551" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="338" key="GridCell.Tab.2.bottom" timestamp="1603047547373">
+    <state width="1877" height="338" key="GridCell.Tab.2.bottom" timestamp="1603049978551">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="338" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603047547373" />
-    <state width="1877" height="338" key="GridCell.Tab.2.center" timestamp="1603047547373">
+    <state width="1877" height="338" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049978551" />
+    <state width="1877" height="338" key="GridCell.Tab.2.center" timestamp="1603049978551">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="338" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603047547373" />
-    <state width="1877" height="338" key="GridCell.Tab.2.left" timestamp="1603047547373">
+    <state width="1877" height="338" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049978551" />
+    <state width="1877" height="338" key="GridCell.Tab.2.left" timestamp="1603049978551">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="338" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603047547373" />
-    <state width="1877" height="338" key="GridCell.Tab.2.right" timestamp="1603047547373">
+    <state width="1877" height="338" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049978551" />
+    <state width="1877" height="338" key="GridCell.Tab.2.right" timestamp="1603049978551">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="338" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603047547373" />
+    <state width="1877" height="338" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049978551" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1600675397473">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600675397473" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603049924217">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603049955219">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049924217" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049955219" />
     <state x="665" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600675545731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -254,6 +268,10 @@
     </state>
     <state x="731" y="223" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603042430229" />
     <state x="731" y="223" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600675552723" />
+    <state x="-1676" y="123" width="1414" height="742" maximized="true" key="dock-window-1" timestamp="1603101703874">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1676" y="123" width="1414" height="742" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603101703874" />
     <state x="342" y="140" key="new project wizard" timestamp="1600776892987">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -263,5 +281,9 @@
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049588466" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600674661849" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603104888888">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603104888888" />
   </component>
 </project>
