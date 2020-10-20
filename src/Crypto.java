@@ -32,7 +32,7 @@ public class Crypto {
 
     // https://stackoverflow.com/questions/6319775/java-collections-convert-a-string-to-a-list-of-characters
     // Kan bruges senere til at generere en dynamisk liste af tilladte karakterer
-    public void printUniqueCharacters(File file) {
+/*    public void printUniqueCharacters(File file) {
         String stringToCheck = readFile(file);
 
         Set<Character> uniqueCharacterSet = stringToCheck.
@@ -45,7 +45,7 @@ public class Crypto {
         Matcher m = p.matcher(uniqueCharacterSet.toString());
 
         System.out.println(m);
-    }
+    }*/
 
     // Utility metode til at læse en fil. Selve metoden bruges ikke til den endelige løsning pt.
     public String readFile(File file) {

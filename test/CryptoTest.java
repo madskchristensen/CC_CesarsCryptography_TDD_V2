@@ -4,7 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -53,7 +58,7 @@ class CryptoTest {
     }
 
     @Test
-    void readFirstSecondAndLastWordFromTextFile() {
+    void readFirstSecondAndLastWordFromTextFileUsingScanner() {
         File file = null;
         Scanner scanner = null;
 
@@ -75,6 +80,36 @@ class CryptoTest {
         assertEquals("The", firstWord);
         assertEquals("Project", secondWord);
         assertEquals("eBooks.", aliceInWonderland.substring(aliceInWonderland.lastIndexOf(" ") + 1));
+    }
+
+    @Test
+    void readRandomLinesFromAliceInWonderLandText() {
+        StringBuilder stringBuffer = new StringBuilder();
+        List<String> lines = null;
+
+        try {
+            File file = new File("resources/aliceinwonderland.txt");
+            lines = Files.readAllLines(Paths.get(file.getAbsolutePath()), StandardCharsets.UTF_8);
+
+            for(String line : lines) {
+                if(line.isBlank()) {
+                    stringBuffer.append(System.lineSeparator());
+                } else {
+                    stringBuffer.append(line);
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String output = stringBuffer.toString();
+
+        assertAll("lines",
+                () -> assertTrue(output.contains("The Project Gutenberg EBook of Alice in Wonderland, by Alice Gerstenberg")),
+                () -> assertTrue(output.contains("Collar the Dormouse! Behead the Dormouse! Turn that Dormouse out of court!")),
+                () -> assertTrue(output.contains("subscribe to our email newsletter to hear about new eBooks."))
+        );
     }
 
     @Test

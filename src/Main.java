@@ -13,6 +13,7 @@ public class Main {
             BufferedWriter writer = new BufferedWriter(new FileWriter("encryptedAlice.txt"));
             writer.write(crypto.encrypt(alice));
             writer.close();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
