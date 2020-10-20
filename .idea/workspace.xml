@@ -141,7 +141,7 @@
       <workItem from="1600672793285" duration="8705000" />
       <workItem from="1603037525830" duration="8378000" />
       <workItem from="1603097189266" duration="11118000" />
-      <workItem from="1603188942609" duration="1200000" />
+      <workItem from="1603188942609" duration="2557000" />
     </task>
     <task id="LOCAL-00001" summary="-- slettet decryptor klassen. lavet crypto klasse der skal stå for kryptering/dekryptering.. skal måske deles mere op.&#10;-- Laves flere test metoder. Bl.a. en metode der benytter characterMap til at kryptere end string. Lavet med switch case. Kan nok gøres smartere.">
       <created>1603047850219</created>
@@ -178,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603108070169</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="-- Fixet så alt krypteret tekst gemmes i den endelige fil (manglede at kalde .close() på BufferedWriter&#10;-- Tilføjet aliceinwonderland.txt til git repo">
+      <created>1603190223762</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603190223762</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,36 +197,37 @@
     <MESSAGE value="-- rettet hasMapBeenPopulated.... test metode da den forventede forkerte tegn efter ændring af tilladte karakterer" />
     <MESSAGE value="-- gjort logikken for kryptering pænere" />
     <MESSAGE value="-- Lavet crypto klasse. Kryptering fungerer og kan gemmes til fil. Dog bliver alt ikke gemt hvilket også kan ses hvis man skifter hvilke writer kald der sker ved linje 21/22 i main. Muligvis fordi der er en maks størrelse på BufferedWriter eller FileWriter?" />
-    <option name="LAST_COMMIT_MESSAGE" value="-- Lavet crypto klasse. Kryptering fungerer og kan gemmes til fil. Dog bliver alt ikke gemt hvilket også kan ses hvis man skifter hvilke writer kald der sker ved linje 21/22 i main. Muligvis fordi der er en maks størrelse på BufferedWriter eller FileWriter?" />
+    <MESSAGE value="-- Fixet så alt krypteret tekst gemmes i den endelige fil (manglede at kalde .close() på BufferedWriter&#10;-- Tilføjet aliceinwonderland.txt til git repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="-- Fixet så alt krypteret tekst gemmes i den endelige fil (manglede at kalde .close() på BufferedWriter&#10;-- Tilføjet aliceinwonderland.txt til git repo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="588" y="209" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1603106040105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="588" y="209" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603106040105" />
-    <state x="276" y="169" width="1108" height="771" key="CommitChangelistDialog2" timestamp="1603108069296">
+    <state x="276" y="169" width="1108" height="771" key="CommitChangelistDialog2" timestamp="1603190222822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="276" y="169" width="1108" height="771" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603108069296" />
-    <state width="1877" height="227" key="GridCell.Tab.0.bottom" timestamp="1603110386698">
+    <state x="276" y="169" width="1108" height="771" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603190222822" />
+    <state width="1877" height="227" key="GridCell.Tab.0.bottom" timestamp="1603191131000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603110386698" />
+    <state width="1877" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603191131000" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="227" key="GridCell.Tab.0.center" timestamp="1603110386698">
+    <state width="1877" height="227" key="GridCell.Tab.0.center" timestamp="1603191131000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603110386698" />
+    <state width="1877" height="227" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603191131000" />
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="227" key="GridCell.Tab.0.left" timestamp="1603110386698">
+    <state width="1877" height="227" key="GridCell.Tab.0.left" timestamp="1603191130999">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603110386698" />
+    <state width="1877" height="227" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603191130999" />
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="227" key="GridCell.Tab.0.right" timestamp="1603110386698">
+    <state width="1877" height="227" key="GridCell.Tab.0.right" timestamp="1603191131000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603110386698" />
+    <state width="1877" height="227" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603191131000" />
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
     <state width="1877" height="338" key="GridCell.Tab.1.bottom" timestamp="1603049978551">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -261,10 +269,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600675397473" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603108071330">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603190225321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603108071330" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603190225321" />
     <state x="665" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600675545731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

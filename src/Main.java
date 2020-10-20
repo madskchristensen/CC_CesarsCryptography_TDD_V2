@@ -9,6 +9,7 @@ public class Main {
         final File alice = new File("resources/aliceinwonderland.txt");
         Crypto crypto = new Crypto();
 
+        // System.out.println(crypto.readFileFormatted(alice));
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("encryptedAlice.txt"));
             writer.write(crypto.encrypt(alice));

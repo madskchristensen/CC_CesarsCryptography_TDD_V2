@@ -1,6 +1,10 @@
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -46,12 +50,27 @@ public class Crypto {
         System.out.println(m);
     }
 
-    // IKKE FÆRDIG
+    // https://javarevisited.blogspot.com/2015/02/how-to-read-file-in-one-line-java-8.html
+    // https://beginnersbook.com/2015/04/append-a-newline-to-stringbuffer/
     public String readFileFormatted(File file) {
         StringBuilder stringBuffer = new StringBuilder();
-        BufferedReader bf = null;
 
-        return "";
+        try {
+            List<String> lines = Files.readAllLines(Paths.get(file.getAbsolutePath()), StandardCharsets.UTF_8);
+
+            for(String line : lines) {
+                if(line.isBlank()) {
+                    stringBuffer.append(System.lineSeparator());
+                } else {
+                    stringBuffer.append(line);
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return stringBuffer.toString();
     }
 
     public String encrypt(File file) {
@@ -107,8 +126,6 @@ public class Crypto {
         while(scanner.hasNext()) {
             stringToReturn = stringToReturn + " " + scanner.next();
         }
-
-        System.out.println(stringToReturn);
 
         return stringToReturn;
     }
