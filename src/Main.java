@@ -9,17 +9,10 @@ public class Main {
         final File alice = new File("resources/aliceinwonderland.txt");
         Crypto crypto = new Crypto();
 
-        BufferedWriter writer = null;
-
         try {
-            writer = new BufferedWriter(new FileWriter("encryptedAlice.txt"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            writer.write(crypto.readFile(alice));
-            // writer.write(crypto.encrypt(alice));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("encryptedAlice.txt"));
+            writer.write(crypto.encrypt(alice));
+            writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

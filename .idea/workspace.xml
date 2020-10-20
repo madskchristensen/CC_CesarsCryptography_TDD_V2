@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc862bfc-f8e1-4e79-be84-32f23b683cc8" name="Default Changelist" comment="-- Lavet crypto klasse samt testet.">
+    <list default="true" id="dc862bfc-f8e1-4e79-be84-32f23b683cc8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Crypto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Crypto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/CryptoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/CryptoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,15 +59,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,11 +111,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.CryptoTest.readFirstAndSecondWordFromTextFile" />
       <item itemvalue="JUnit.CryptoTest.encryptStringUsingCharacterMap" />
       <item itemvalue="JUnit.CryptoTest.hasMapBeenPopulatedCorrectlyFromAllowedCharactersString" />
       <item itemvalue="JUnit.CryptoTest.readFirstSecondAndLastWordFromTextFile" />
-      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
@@ -143,7 +140,8 @@
       <updated>1600672787349</updated>
       <workItem from="1600672793285" duration="8705000" />
       <workItem from="1603037525830" duration="8378000" />
-      <workItem from="1603097189266" duration="10282000" />
+      <workItem from="1603097189266" duration="11118000" />
+      <workItem from="1603188942609" duration="1200000" />
     </task>
     <task id="LOCAL-00001" summary="-- slettet decryptor klassen. lavet crypto klasse der skal stå for kryptering/dekryptering.. skal måske deles mere op.&#10;-- Laves flere test metoder. Bl.a. en metode der benytter characterMap til at kryptere end string. Lavet med switch case. Kan nok gøres smartere.">
       <created>1603047850219</created>
@@ -173,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603049953912</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="-- Lavet crypto klasse. Kryptering fungerer og kan gemmes til fil. Dog bliver alt ikke gemt hvilket også kan ses hvis man skifter hvilke writer kald der sker ved linje 21/22 i main. Muligvis fordi der er en maks størrelse på BufferedWriter eller FileWriter?">
+      <created>1603108070169</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603108070169</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,36 +189,37 @@
     <MESSAGE value="-- tilføjet nogle tegn tegn til allowedCharacters (manglede wæøå)&#10;-- tilføjet kommentar til CryptoTest. Hvis key er sat for højt virker logikken for kryptering ikke" />
     <MESSAGE value="-- rettet hasMapBeenPopulated.... test metode da den forventede forkerte tegn efter ændring af tilladte karakterer" />
     <MESSAGE value="-- gjort logikken for kryptering pænere" />
-    <option name="LAST_COMMIT_MESSAGE" value="-- gjort logikken for kryptering pænere" />
+    <MESSAGE value="-- Lavet crypto klasse. Kryptering fungerer og kan gemmes til fil. Dog bliver alt ikke gemt hvilket også kan ses hvis man skifter hvilke writer kald der sker ved linje 21/22 i main. Muligvis fordi der er en maks størrelse på BufferedWriter eller FileWriter?" />
+    <option name="LAST_COMMIT_MESSAGE" value="-- Lavet crypto klasse. Kryptering fungerer og kan gemmes til fil. Dog bliver alt ikke gemt hvilket også kan ses hvis man skifter hvilke writer kald der sker ved linje 21/22 i main. Muligvis fordi der er en maks størrelse på BufferedWriter eller FileWriter?" />
   </component>
   <component name="WindowStateProjectService">
     <state x="588" y="209" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1603106040105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="588" y="209" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603106040105" />
-    <state x="504" y="194" width="1108" height="771" key="CommitChangelistDialog2" timestamp="1603107884124">
+    <state x="276" y="169" width="1108" height="771" key="CommitChangelistDialog2" timestamp="1603108069296">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="504" y="194" width="1108" height="771" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603107884124" />
-    <state width="1877" height="227" key="GridCell.Tab.0.bottom" timestamp="1603107794303">
+    <state x="276" y="169" width="1108" height="771" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603108069296" />
+    <state width="1877" height="227" key="GridCell.Tab.0.bottom" timestamp="1603110386698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603107794303" />
+    <state width="1877" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603110386698" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="227" key="GridCell.Tab.0.center" timestamp="1603107794303">
+    <state width="1877" height="227" key="GridCell.Tab.0.center" timestamp="1603110386698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603107794303" />
+    <state width="1877" height="227" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603110386698" />
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="227" key="GridCell.Tab.0.left" timestamp="1603107794303">
+    <state width="1877" height="227" key="GridCell.Tab.0.left" timestamp="1603110386698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603107794303" />
+    <state width="1877" height="227" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603110386698" />
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="227" key="GridCell.Tab.0.right" timestamp="1603107794303">
+    <state width="1877" height="227" key="GridCell.Tab.0.right" timestamp="1603110386698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603107794303" />
+    <state width="1877" height="227" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603110386698" />
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
     <state width="1877" height="338" key="GridCell.Tab.1.bottom" timestamp="1603049978551">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -255,10 +261,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600675397473" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603049955219">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603108071330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603049955219" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603108071330" />
     <state x="665" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600675545731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

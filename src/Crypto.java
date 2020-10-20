@@ -6,10 +6,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-// todo -- Generer allowedExtraCharacters automatisk ud fra fil (se printUniqueCharacters metoden)
-// todo -- Find ud af om det ovenstående overhovedet giver mening
-// todo -- Gør så formatering af endelig fil matcher formatering fra oprindelig
-// todo -- Det sidste punktum kommer ikke med i den krypterede fil :(
+// todo -- 1. Gør så formatering af endelig fil matcher formatering fra oprindelig
+// todo -- 2. Generer allowedExtraCharacters automatisk ud fra fil (se printUniqueCharacters metoden)
+// todo -- 2.1 Find ud af om det ovenstående overhovedet giver mening
+// todo -- 3. Det sidste punktum kommer ikke med i den krypterede fil :(
 
 public class Crypto {
     private final String allowedLetters = "abcdefghijklmnopqrstuvwxyz";
