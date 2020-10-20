@@ -28,6 +28,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -141,7 +142,7 @@
       <workItem from="1600672793285" duration="8705000" />
       <workItem from="1603037525830" duration="8378000" />
       <workItem from="1603097189266" duration="11118000" />
-      <workItem from="1603188942609" duration="2557000" />
+      <workItem from="1603188942609" duration="5027000" />
     </task>
     <task id="LOCAL-00001" summary="-- slettet decryptor klassen. lavet crypto klasse der skal stå for kryptering/dekryptering.. skal måske deles mere op.&#10;-- Laves flere test metoder. Bl.a. en metode der benytter characterMap til at kryptere end string. Lavet med switch case. Kan nok gøres smartere.">
       <created>1603047850219</created>
@@ -185,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603190223762</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="-- Lavet metode i Crypto som læser input fil og formatterer den rigtigt (med line seperators osv.)">
+      <created>1603191658338</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603191658338</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,36 +206,37 @@
     <MESSAGE value="-- gjort logikken for kryptering pænere" />
     <MESSAGE value="-- Lavet crypto klasse. Kryptering fungerer og kan gemmes til fil. Dog bliver alt ikke gemt hvilket også kan ses hvis man skifter hvilke writer kald der sker ved linje 21/22 i main. Muligvis fordi der er en maks størrelse på BufferedWriter eller FileWriter?" />
     <MESSAGE value="-- Fixet så alt krypteret tekst gemmes i den endelige fil (manglede at kalde .close() på BufferedWriter&#10;-- Tilføjet aliceinwonderland.txt til git repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="-- Fixet så alt krypteret tekst gemmes i den endelige fil (manglede at kalde .close() på BufferedWriter&#10;-- Tilføjet aliceinwonderland.txt til git repo" />
+    <MESSAGE value="-- Lavet metode i Crypto som læser input fil og formatterer den rigtigt (med line seperators osv.)" />
+    <option name="LAST_COMMIT_MESSAGE" value="-- Lavet metode i Crypto som læser input fil og formatterer den rigtigt (med line seperators osv.)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="588" y="209" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1603106040105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="588" y="209" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603106040105" />
-    <state x="276" y="169" width="1108" height="771" key="CommitChangelistDialog2" timestamp="1603190222822">
+    <state x="276" y="169" width="1108" height="771" key="CommitChangelistDialog2" timestamp="1603191657472">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="276" y="169" width="1108" height="771" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603190222822" />
-    <state width="1877" height="227" key="GridCell.Tab.0.bottom" timestamp="1603191131000">
+    <state x="276" y="169" width="1108" height="771" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603191657472" />
+    <state width="1877" height="227" key="GridCell.Tab.0.bottom" timestamp="1603193532055">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603191131000" />
+    <state width="1877" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603193532055" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="227" key="GridCell.Tab.0.center" timestamp="1603191131000">
+    <state width="1877" height="227" key="GridCell.Tab.0.center" timestamp="1603193532055">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603191131000" />
+    <state width="1877" height="227" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603193532055" />
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="227" key="GridCell.Tab.0.left" timestamp="1603191130999">
+    <state width="1877" height="227" key="GridCell.Tab.0.left" timestamp="1603193532054">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603191130999" />
+    <state width="1877" height="227" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603193532054" />
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
-    <state width="1877" height="227" key="GridCell.Tab.0.right" timestamp="1603191131000">
+    <state width="1877" height="227" key="GridCell.Tab.0.right" timestamp="1603193532055">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603191131000" />
+    <state width="1877" height="227" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603193532055" />
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600776914482" />
     <state width="1877" height="338" key="GridCell.Tab.1.bottom" timestamp="1603049978551">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -269,10 +278,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600675397473" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603190225321">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603191659320">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603190225321" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603191659320" />
     <state x="665" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600675545731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -286,6 +295,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1676" y="123" width="1414" height="742" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603101703874" />
+    <state x="690" y="281" key="extract.method.dialog" timestamp="1603192140041">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="281" key="extract.method.dialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603192140041" />
     <state x="342" y="140" key="new project wizard" timestamp="1600776892987">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
